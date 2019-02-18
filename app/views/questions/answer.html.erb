@@ -1,0 +1,25 @@
+<h1>Stupid Coaching</h1>
+<!-- <p>Find me in app/views/questions/answer.html.erb</p>
+-->
+
+
+<!-- def coach_answer(your_message) -->
+<div class="your_question">
+<%= params['question'] %>
+<h3 class="person"> -You </h3>
+</div>
+<div class="coach_answer">
+  <% if params['question'] == "i am going to work right now!" %>
+  <h3> Great </h3>
+  <% elsif params['question'][-1] == "?" %>
+  <h3> Silly question, get dressed and go to work! </h3>
+  <% elsif params['question'][-1] == "?" %>
+  <h3> Silly question, get dressed and go to work! </h3>
+  <% else %>
+  <h3> I don't care, get dressed and go to work! </h3>
+  <% end %>
+<h3 class="person"> -Your coach </h3>
+</div>
+<br>
+
+<div><%=link_to "Ask new question", ask_path %> </div>
